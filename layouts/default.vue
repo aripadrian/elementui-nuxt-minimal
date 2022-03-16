@@ -30,14 +30,18 @@
     <el-container>
       <el-header style="text-align: right; font-size: 12px">
         <el-dropdown>
-          <i class="el-icon-setting" style="margin-right: 15px"></i>
+          <span class="el-dropdown-link">
+            <i class="el-icon-user-solid"></i>
+            Ari Padrian <i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>View</el-dropdown-item>
-            <el-dropdown-item>Add</el-dropdown-item>
-            <el-dropdown-item>Delete</el-dropdown-item>
+            <el-dropdown-item command="a">Action 1</el-dropdown-item>
+            <el-dropdown-item command="b">Action 2</el-dropdown-item>
+            <el-dropdown-item command="c">Action 3</el-dropdown-item>
+            <el-dropdown-item command="d" disabled>Action 4</el-dropdown-item>
+            <el-dropdown-item command="e" divided>Action 5</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>Tom</span>
       </el-header>
 
       <el-main>
@@ -79,5 +83,13 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.el-dropdown-link {
+  cursor: pointer;
+  color: #409eff;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
 }
 </style>
